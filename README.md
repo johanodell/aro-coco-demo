@@ -2,7 +2,7 @@
 
 This repository contains automation and demonstration scripts for the "Understanding Confidential Containers - Workshop on ARO" from Red Hat Demo Portal. 
 
-You need to deploy the workshop and run through Setup Phase 1 - Deploy Trustee Operator and configure. The run through Setup Phase 2 - Deploy and configure OpenShift Sandboxed Containers (OSC) Operator etc. 
+You need to deploy the workshop and run through Setup Phase 1 - Deploy Trustee Operator and configure. Then run through Setup Phase 2 - Deploy and configure OpenShift Sandboxed Containers (OSC) Operator etc. 
 
 This repo can then be used to demonstrate workloads in this environment. 
 

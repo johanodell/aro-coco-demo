@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sealed-fraud-detection
+spec:
+  runtimeClassName: kata-remote
+  containers:
+  - name: fraud-detection
+    image: quay.io/confidential-devhub/signed/fraud-detection:latest
+    env:
+    - name: DECRYPTION_KEY_PATH
+      value: /app/downloaded_keys/dataset_key
+    volumeMounts:
+    - name: downloaded-keys-volume
+      mountPath: "/app/downloaded_keys"
+  volumes:
+  - name: downloaded-keys-volume
+    secret:
+      secretName: fraud-dataset-sealed  # Refererar till vår Sealed Secret

@@ -1,0 +1,36 @@
+# --- Byte-compiled / Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Temporary / Editor files ---
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Demo & Script Artifacts ---
+# In case you redirect output to logs during the demo
+*.log
+# If you create any local env files for testing
+.env
+.env.local
+
+# --- Kubernetes / OpenShift Artifacts ---
+# Prevents accidentally committing exported secrets or kubeconfigs
+kubeconfig
+*.kubeconfig
+*secret.yaml
+!manifests/*.yaml
+
+# --- System / Architecture Artifacts ---
+# If your setup-demo-prereqs.sh creates temporary terminfo files
+kitty.terminfo
+/tmp/kitty-ti-*
+
+# --- Trustee / Logic ---
+# Don't commit the raw initdata if it contains sensitive environmental keys
+# (Though your current flow pulls it from the cluster, good to have)
+*.toml.bak

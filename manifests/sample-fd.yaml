@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-fraud-detection
+spec:
+  runtimeClassName: kata-remote  # Denna rad aktiverar CoCo 
+  containers:
+  - name: fraud-detection
+    image: quay.io/confidential-devhub/signed/fraud-detection:latest

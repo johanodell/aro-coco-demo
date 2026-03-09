@@ -28,7 +28,7 @@ source ./vars.sh
 **3. Pre-flight Warmup**
 Provision the Azure VMs in advance:
 ```bash
-./utils/1-demo.pre-deploy.sh
+./utils/1-demo-pre-deploy.sh
 ```
 
 **4. Run the demo**
